@@ -222,3 +222,5 @@ if __name__ == "__main__": # execute logic if run directly
     _status.grid(row=0, column=0, sticky=(E, W))
 
     _root.mainloop() # listens for events, blocks any code that comes after it
+
+#Finished coding
