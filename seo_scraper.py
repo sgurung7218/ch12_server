@@ -13,6 +13,7 @@ config = {}
 def fetch_title():
     """
     this function fetches the title of the webpage
+    and displays them in the bottom message box
     :return:
     """
     url = _url.get()
@@ -28,6 +29,8 @@ def fetch_title():
 def fetch_link():
     """
     this function fetches the links used in the webpage
+    and adds the data in _image set so that the listbox
+    will display inside the _img_listbox frame
     :return:
     """
     url = _url.get()
@@ -39,6 +42,7 @@ def fetch_link():
         sb(str(err))
     else:
         soup = BeautifulSoup(page.content, 'html.parser')
+        #urlparse is a function to parse any url and netloc returns the domain name of the url
         base_url = urlparse(url).netloc
         external_urls = set()
         #find all <a> tags with href attributes
