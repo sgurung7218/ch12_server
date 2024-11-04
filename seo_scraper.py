@@ -42,7 +42,6 @@ def fetch_link():
         sb(str(err))
     else:
         soup = BeautifulSoup(page.content, 'html.parser')
-        #urlparse is a function to parse any url and netloc returns the domain name of the url
         base_url = urlparse(url).netloc
         external_urls = set()
         #find all <a> tags with href attributes
@@ -222,5 +221,3 @@ if __name__ == "__main__": # execute logic if run directly
     _status.grid(row=0, column=0, sticky=(E, W))
 
     _root.mainloop() # listens for events, blocks any code that comes after it
-
-#finished code
